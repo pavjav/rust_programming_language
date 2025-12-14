@@ -50,6 +50,16 @@ fn main() {
     Point::new(&(x,y)) or Point{x:x,y:y, z:None}. The latter is what new essentially does.
 
     z is never used, its just meant to highlight how we can create optional fields.
+
+    Note on immutability:
+    Mutability is inherited by the owner of the instance. This means that you cannot specify which fields are/aren't mutable.
+    You must instead design the objects with this in mind. When you need to update your object's attributes you use
+
+    impl Structure {
+        fn func(&mut self) {
+            // use self.field
+        }
+    }
     
     */
 
