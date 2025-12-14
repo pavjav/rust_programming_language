@@ -60,6 +60,22 @@ fn main() {
             // use self.field
         }
     }
+
+    If you really need to make only certain fields mutable, you can use std::cell::Cell
+
+    struct Structure {
+        x: i32,
+        y: std::cell::Cell<i32>
+    }
+
+    impl Structure {
+        fn func(&self) {
+            self.y.set(self.y.get() + 1);
+        }
+    }
+
+    But this implements !Sync which means we can no longer multithread with this struct. Be aware of the tradeoff.
+
     
     */
 
