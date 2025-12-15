@@ -1,30 +1,80 @@
 mod point;
 
-pub struct Circle{
-    center: point::Point,
-    radius: f32,
+pub struct Circle<T>
+where
+    T: Copy
+{
+    center: point::Point<T>,
+    radius: T,
 }
 
-impl Circle {
+
+
+/*
+impl<f32> super::ComputeArea for Circle<f32>{
     fn compute_area(&self) -> f32 {
         std::f32::consts::PI * self.radius
     }
+}
 
-    pub fn area(&self) -> f32 {
-        self.compute_area()
+impl<f64> super::ComputeArea for Circle<f64>{
+    fn compute_area(&self) -> f32 {
+        std::f64::consts::PI * self.radius
+    }
+}
+
+impl<i64> super::ComputeArea for Circle<i64>{
+    fn compute_area(&self) -> i64 {
+        3i64 * self.radius
+    }
+}
+*/
+
+pub trait DynamicAreaCompute {
+    fn dynamic_area_compute(&self)->Self;
+}
+
+impl DynamicAreaCompute for f32 {
+    fn dynamic_area_compute(&self) -> Self {
+        std::f32::consts::PI * self
+    }
+}
+
+impl DynamicAreaCompute for f64 {
+    fn dynamic_area_compute(&self) -> Self {
+        std::f64::consts::PI * self
+    }
+}
+
+impl<T> Circle<T> 
+where
+    T: Copy + std::ops::Mul<Output = T> + DynamicAreaCompute
+{
+
+    pub fn area(&self) -> T {
+        //self.compute_area()
+        //self.compute_area()
+        DynamicAreaCompute::dynamic_area_compute(&self.radius)
     }
 
-    pub fn new(center: &(f32,f32), radius: &f32) -> Circle {
-        Circle { center: point::Point::new(&center.0, &center.1), radius: *radius }
+
+    //pub fn new(x: &T, y: &T, radius: &T) -> Circle<T> {
+    //    Circle { center: center::point::Point::new(x,y), radius: radius}
+    //}
+    pub fn new( coord: &(T,T), radius: &T) -> Circle<T> {
+        Circle { center: point::Point::new(&coord.0, &coord.1), radius: *radius}
     }
 
-    pub fn get_params(&self) -> std::collections::HashMap<&str, f32>{
+    pub fn get_params(&self) -> std::collections::HashMap<&str, &T>{
         let mut params = std::collections::HashMap::new();
-        params.insert("center_x", self.center.x);
-        params.insert("center_y", self.center.y);
-        params.insert("radius", self.radius);
+        params.insert("center_x", &self.center.x);
+        params.insert("center_y", &self.center.y);
+        params.insert("radius", &self.radius);
         params
     }
 }
 
-impl super::Summary for Circle {}
+impl<T> super::Summary for Circle<T> 
+where
+    T: Copy + std::fmt::Display 
+{}

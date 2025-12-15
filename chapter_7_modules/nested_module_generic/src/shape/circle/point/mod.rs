@@ -1,11 +1,16 @@
-pub struct Point{
-    pub x: f32,
-    pub y: f32,
-    _z: Option <f32>
+pub struct Point <T>
+where T: Copy
+{
+    pub x: T,
+    pub y: T,
+    _z: Option <T>
 }
 
-impl Point {
-    pub fn new(x: &f32, y: &f32) -> Point {
+impl<T> Point<T> 
+where
+    T: Copy
+{
+    pub fn new(x: &T, y: &T) -> Point<T> {
         Point{
             x: *x,
             y: *y,

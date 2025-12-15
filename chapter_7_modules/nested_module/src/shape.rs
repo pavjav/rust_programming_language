@@ -1,4 +1,3 @@
-use crate::shape::rectangle::Rectangle;
 
 pub mod rectangle;
 pub mod circle;

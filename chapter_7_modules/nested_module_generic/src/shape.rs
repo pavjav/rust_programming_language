@@ -1,22 +1,26 @@
-use crate::shape::rectangle::Rectangle;
-
 pub mod rectangle;
 pub mod circle;
 
-pub enum Shape {
-    RectangleShape(rectangle::Rectangle),
-    CircleShape(circle::Circle)
+pub enum Shape<T> 
+where 
+    T: Copy + std::fmt::Display + std::ops::Mul<Output = T> + circle::DynamicAreaCompute
+ {
+    RectangleShape(rectangle::Rectangle<T>),
+    CircleShape(circle::Circle<T>)
 }
 
-impl Shape {
-    pub fn area(&self) -> f32 {
+impl<T> Shape<T> 
+where
+    T: Copy + std::fmt::Display + std::ops::Mul<Output = T> + circle::DynamicAreaCompute
+{
+    pub fn area(&self) -> T {
         match self {
             Shape::RectangleShape(rect) => rect.area(),
             Shape::CircleShape(circ) => circ.area()
         }
     }
 
-    pub fn get_params(&self) -> std::collections::HashMap<&str, f32>{
+    pub fn get_params(&self) -> std::collections::HashMap<&str, &T>{
         match self {
             Shape::RectangleShape(rect) => rect.get_params(),
             Shape::CircleShape(circ) => circ.get_params()
@@ -39,4 +43,3 @@ pub trait Summary{
         String::from("No summary available")
     }
 }
-
