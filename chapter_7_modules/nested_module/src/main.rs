@@ -1,4 +1,3 @@
-use crate::shape::Summary;
 
 mod shape;
 

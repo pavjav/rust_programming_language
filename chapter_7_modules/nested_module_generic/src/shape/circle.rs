@@ -36,13 +36,13 @@ pub trait DynamicAreaCompute {
 
 impl DynamicAreaCompute for f32 {
     fn dynamic_area_compute(&self) -> Self {
-        std::f32::consts::PI * self
+        std::f32::consts::PI * self.powf(2.0f32)
     }
 }
 
 impl DynamicAreaCompute for f64 {
     fn dynamic_area_compute(&self) -> Self {
-        std::f64::consts::PI * self
+        std::f64::consts::PI * self.powf(2.0f64)
     }
 }
 

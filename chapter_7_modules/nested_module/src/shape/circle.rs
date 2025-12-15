@@ -7,7 +7,7 @@ pub struct Circle{
 
 impl Circle {
     fn compute_area(&self) -> f32 {
-        std::f32::consts::PI * self.radius
+        std::f32::consts::PI * self.radius.powf(2.0f32)
     }
 
     pub fn area(&self) -> f32 {
