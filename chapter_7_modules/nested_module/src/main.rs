@@ -1,3 +1,5 @@
+use crate::shape::Summary;
+
 mod shape;
 
 fn main() {
@@ -47,7 +49,7 @@ fn main() {
     shape::circle::point has a struct called Point with another new() method. Point has two public f32 attributes called x,y.
     and a private Option<f32> attribute called z.
     Because x,y are public we can instantiate a new 2-D point with either:
-    Point::new(&(x,y)) or Point{x:x,y:y, z:None}. The latter is what new essentially does.
+    Point::new(&(x,y)) or Point{x:x,y:y, _z:None}. The latter is what new essentially does.
 
     z is never used, its just meant to highlight how we can create optional fields.
 
@@ -76,6 +78,9 @@ fn main() {
 
     But this implements !Sync which means we can no longer multithread with this struct. Be aware of the tradeoff.
 
+    This project also shows how we can use traits to act as virtual functions with a default behavior.
+    Check shape.rs for the details.    
+
     
     */
 
@@ -91,5 +96,5 @@ fn main() {
     );
 
     println!("rectangle with width {} and heigh {} has area {}", rect.get_params()["width"], rect.get_params()["height"], rect.area());
-
+    println!("{}",circ.summarize());
 }
