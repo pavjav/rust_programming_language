@@ -48,7 +48,7 @@ fn main() {
 
     // Return values and scope
 
-    s9 = gives_ownership(); // gives_ownership moves its return value to s9
+    let s9 = gives_ownership(); // gives_ownership moves its return value to s9
     println!("s9 = {}", s9);
     let s10 = String::from("hello");
     let s11 = takes_and_gives_back(s10); // s10 is moved into the function and then moved out to s11

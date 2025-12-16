@@ -13,14 +13,6 @@ pub struct Complex <T> {
     imag: T
 }
 
-/*
-impl <'a,'b, T> for  &'a Complex<T>
-where
-    &'a Complex<T> : std::ops::Mul<Output = Complex<T>>
-{
-
-}
-*/
 impl<'a, 'b, T> Complex<T> 
 where
     T: 
@@ -35,7 +27,6 @@ where
         Copy
         + std::ops::Add<Output = Complex<T>>
         + std::ops::Sub<Output = Complex<T>>
-        //+ std::ops::Mul<Output = Complex<T>>
         + std::ops::Div<Output = Complex<T>>,
     &'a Complex<T>:
         std::ops::Mul<&'b Complex<T>, Output = Complex<T>> 
