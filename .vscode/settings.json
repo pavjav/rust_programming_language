@@ -15,6 +15,9 @@
         "chapter_6_enums_patterns/option/Cargo.toml",
         "chapter_7_modules/nested_module/Cargo.toml",
         "chapter_7_modules/nested_module_generic/Cargo.toml",
-        "chapter_7_modules/complex/Cargo.toml"
+        "chapter_7_modules/complex/Cargo.toml",
+        "chapter_8_common_collections/vector/Cargo.toml",
+        "chapter_8_common_collections/strings/Cargo.toml",
+        "chapter_8_common_collections/hashmaps/Cargo.toml"
     ]
 }

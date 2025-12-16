@@ -37,8 +37,8 @@ impl Default for Ipv6Addr {
 }
 
 fn main() {
-    let home = IpAddrString::V4(String::from("127.0.0.1"));
-    let loopback = IpAddrString::V4(String::from("::1"));
-    let home = IpAddr::V4(Ipv4Addr{address:(0,0,0,0), description: "".to_string()});
-    let home = IpAddr::V6(Ipv6Addr{address:"foo".to_string(), description: "bar".to_string()});
+    let _home = IpAddrString::V4(String::from("127.0.0.1"));
+    let _loopback = IpAddrString::V4(String::from("::1"));
+    let _home = IpAddr::V4(Ipv4Addr{address:(0,0,0,0), description: "".to_string()});
+    let _home = IpAddr::V6(Ipv6Addr{address:"foo".to_string(), description: "bar".to_string()});
 }
