@@ -1,14 +1,13 @@
 {
     "rust-analyzer.linkedProjects": [
         "chapter_2_intro/hello_cargo/Cargo.toml",
-        "chapter_2_intro/helloworld/Cargo.toml",
         "chapter_2_intro/guessing_game/Cargo.toml",
-        "chapter_3_common_concpets/control_flow/Cargo.toml",
-        "chapter_3_common_concpets/function/Cargo.toml",
-        "chapter_3_common_concpets/loops/Cargo.toml",
-        "chapter_3_common_concpets/types/Cargo.toml",
+        "chapter_3_common_concepts/control_flow/Cargo.toml",
+        "chapter_3_common_concepts/function/Cargo.toml",
+        "chapter_3_common_concepts/loops/Cargo.toml",
+        "chapter_3_common_concepts/types/Cargo.toml",
         "chapter_4_ownership/strings/Cargo.toml",
-        "chapter_4_ownership/string_silce/Cargo.toml",
+        "chapter_4_ownership/string_slice/Cargo.toml",
         "chapter_5_structs/method_syntax/Cargo.toml",
         "chapter_5_structs/structs/Cargo.toml",
         "chapter_6_enums_patterns/enums/Cargo.toml",
@@ -19,6 +18,10 @@
         "chapter_8_common_collections/vector/Cargo.toml",
         "chapter_8_common_collections/strings/Cargo.toml",
         "chapter_8_common_collections/hashmaps/Cargo.toml",
-        "chapter_9_error_handling/result/Cargo.toml"
+        "chapter_9_error_handling/result/Cargo.toml",
+        "chapter_10_types_traits_lifetimes/generic/Cargo.toml",
+        "chapter_10_types_traits_lifetimes/lifetimes/Cargo.toml",
+        "chapter_11_tests/adder/Cargo.toml",
+        "chapter_11_tests/adder_improved/Cargo.toml"
     ]
 }
