@@ -18,6 +18,7 @@
         "chapter_7_modules/complex/Cargo.toml",
         "chapter_8_common_collections/vector/Cargo.toml",
         "chapter_8_common_collections/strings/Cargo.toml",
-        "chapter_8_common_collections/hashmaps/Cargo.toml"
+        "chapter_8_common_collections/hashmaps/Cargo.toml",
+        "chapter_9_error_handling/result/Cargo.toml"
     ]
 }
