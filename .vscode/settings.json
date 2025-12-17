@@ -22,6 +22,6 @@
         "chapter_10_types_traits_lifetimes/generic/Cargo.toml",
         "chapter_10_types_traits_lifetimes/lifetimes/Cargo.toml",
         "chapter_11_tests/adder/Cargo.toml",
-        "chapter_11_tests/adder_improved/Cargo.toml"
+        "chapter_11_tests/adder_improved/Cargo.toml",
     ]
 }

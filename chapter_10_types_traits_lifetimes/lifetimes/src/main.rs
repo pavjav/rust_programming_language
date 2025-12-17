@@ -107,6 +107,4 @@ fn main() {
     let result = longest_with_announcement(s1.as_str(),s2.as_str(), "Yay!");
 
 
-
-
 }
