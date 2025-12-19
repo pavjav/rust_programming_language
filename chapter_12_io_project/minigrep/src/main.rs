@@ -6,7 +6,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     // These are some ways to parse env arg input
-    let (_query, _file_path) = parse_config_by_ref(&args);
+    // let (_query, _file_path) = parse_config_by_ref(&args);
     //println!("Searching for {}", query);
     //println!("In file {}",file_path);
     // Class constructor is the preferred method to handle errors as we can catch multiple errors and pass them to an unwrap
@@ -29,7 +29,7 @@ fn main() {
 
 }
 
-
+#[allow(dead_code)]
 fn parse_config_by_ref(args: &[String]) -> (&str,&str) {
     let query = &args[1];
     let file_path = &args[2];
