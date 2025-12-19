@@ -23,5 +23,7 @@
         "chapter_10_types_traits_lifetimes/lifetimes/Cargo.toml",
         "chapter_11_tests/adder/Cargo.toml",
         "chapter_11_tests/adder_improved/Cargo.toml",
+        "chapter_12_io_project/minigrep/Cargo.toml",
+        "projects/algebra/Cargo.toml"
     ]
 }
