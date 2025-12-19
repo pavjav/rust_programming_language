@@ -6,6 +6,8 @@ By passing by ref, we increase the performance of multiplication.
 
 */
 
+
+
 /* This is how we would implement multiplication by reference. This can save time by avoiding copying Complex<T>*/
 impl<'a,'b, T> std::ops::Mul<&'b super::Complex<T>> for &'a super::Complex<T>
 where
@@ -33,6 +35,7 @@ where
         }
     }
 }
+
 //This is how we multiply a value (self) by reference (rhs)
 impl<'b, T> std::ops::Mul<&'b super::Complex<T>> for super::Complex<T>
 where
