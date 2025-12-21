@@ -27,6 +27,7 @@
         "chapter_13_iterators_closures/closures/Cargo.toml",
         "chapter_13_iterators_closures/iterators/Cargo.toml",
         "chapter_13_iterators_closures/btrgrep/Cargo.toml",
+        "chapter_14_crates/docs/Cargo.toml",
         "projects/algebra/Cargo.toml"
     ]
 }
