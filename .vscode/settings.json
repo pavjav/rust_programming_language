@@ -24,6 +24,9 @@
         "chapter_11_tests/adder/Cargo.toml",
         "chapter_11_tests/adder_improved/Cargo.toml",
         "chapter_12_io_project/minigrep/Cargo.toml",
+        "chapter_13_iterators_closures/closures/Cargo.toml",
+        "chapter_13_iterators_closures/iterators/Cargo.toml",
+        "chapter_13_iterators_closures/btrgrep/Cargo.toml",
         "projects/algebra/Cargo.toml"
     ]
 }
