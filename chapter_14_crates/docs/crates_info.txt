@@ -1,0 +1,20 @@
+Once you have a token from crates.io
+
+cargo login TOKEN
+
+will allow you to publish a crate via 
+
+cargo publish
+
+Just make sure that the Cargo.toml is updated with the next version and does not conflict with any other crate
+Also make sure your license is supplied.
+
+In order to deprecate a bad version of your crate use 
+
+cargo yank --vers 1.0.1
+to deprecate it
+
+and cargo yank --vers 1.0.1 --undo
+to undo that action
+
+Deprecating will make it so any dependencies on your crate breaks and it encourages a developer to use a newer version
