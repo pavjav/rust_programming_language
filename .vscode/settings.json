@@ -29,6 +29,7 @@
         "chapter_13_iterators_closures/btrgrep/Cargo.toml",
         "chapter_14_crates/docs/Cargo.toml",
         "chapter_14_crates/add/Cargo.toml",
+        "chapter_15_pointers/boxes/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
 }
