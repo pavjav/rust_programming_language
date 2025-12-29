@@ -30,6 +30,9 @@
         "chapter_14_crates/docs/Cargo.toml",
         "chapter_14_crates/add/Cargo.toml",
         "chapter_15_pointers/boxes/Cargo.toml",
+        "chapter_15_pointers/weak/Cargo.toml",
+        "chapter_16_concurrency/threads/Cargo.toml",
+        "chapter_16_concurrency/mutex/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
 }
