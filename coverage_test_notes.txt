@@ -1,0 +1,2 @@
+Install cargo-llvm-cov with cargo install cargo-llvm-cov
+Run with cargo llvm-cov in Cargo.toml directory
