@@ -33,6 +33,9 @@
         "chapter_15_pointers/weak/Cargo.toml",
         "chapter_16_concurrency/threads/Cargo.toml",
         "chapter_16_concurrency/mutex/Cargo.toml",
+        "chapter_17_oop/encapsulation/Cargo.toml",
+        "chapter_17_oop/state_pattern/Cargo.toml",
+        "chapter_17_oop/traits/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
 }
