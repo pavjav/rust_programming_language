@@ -36,6 +36,7 @@
         "chapter_17_oop/encapsulation/Cargo.toml",
         "chapter_17_oop/state_pattern/Cargo.toml",
         "chapter_17_oop/traits/Cargo.toml",
+        "chapter_17_oop/nonstate_pattern/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
 }
