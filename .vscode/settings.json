@@ -41,7 +41,7 @@
         "chapter_19_advanced_features/unsafe_rust/Cargo.toml",
         "chapter_19_advanced_features/advanced_traits/Cargo.toml",
         "chapter_19_advanced_features/advanced_types/Cargo.toml",
-        "chapter_19_advanced_features/advnaced_functions/Cargo.toml",
+        "chapter_19_advanced_features/advanced_functions/Cargo.toml",
         "chapter_19_advanced_features/macros/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
