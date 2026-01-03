@@ -43,6 +43,7 @@
         "chapter_19_advanced_features/advanced_types/Cargo.toml",
         "chapter_19_advanced_features/advanced_functions/Cargo.toml",
         "chapter_19_advanced_features/macros/Cargo.toml",
+        "chapter_20_final_project/hello/Cargo.toml",
         "projects/algebra/Cargo.toml",
     ]
 }
