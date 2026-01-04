@@ -3,12 +3,17 @@ use std::{
     thread,
 };
 
+/// Single Worker struct
+/// Contains an id (usize) and a thread of type Option<thread::JoinHandle<()>>
 struct Worker {
     id: usize,
     thread: Option<thread::JoinHandle<()>>
 }
 
+
 impl Worker {
+    /// Worker::new()
+    /// Takes an 
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
         let thread = thread::spawn(
             move || loop {
@@ -29,8 +34,11 @@ impl Worker {
     }
 }
 
+/// Job type alias of Box<dyn FnOnce + Send + 'static>
 type Job = Box<dyn FnOnce() + Send + 'static>;
 
+/// ThreadPool contains a vector of Workers
+/// and a sender of type Option<mpsc::Sender<Job>>
 pub struct ThreadPool {
     workers: Vec<Worker>,
     sender: Option<mpsc::Sender<Job>>
